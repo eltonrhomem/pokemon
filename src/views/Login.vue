@@ -1,5 +1,5 @@
 <template>
-  <div id="login">
+  <div id="Login">
     <v-app id="inspire">
       <v-app id="inspire">
         <v-content>
@@ -11,11 +11,7 @@
                     <v-toolbar-title>Login form</v-toolbar-title>
                     <v-spacer></v-spacer>
                     <v-tooltip bottom>
-                      <template
-                        v-slot:activator="{
-                          on,
-                        }"
-                      >
+                      <template v-slot:activator="{ on }">
                         <v-btn
                           :href="source"
                           icon
@@ -34,7 +30,7 @@
                       <v-text-field
                         label="Login"
                         name="login"
-                        prepend-icon="person"
+                        prepend-icon=""
                         type="text"
                       ></v-text-field>
 
@@ -42,7 +38,7 @@
                         id="password"
                         label="Password"
                         name="password"
-                        prepend-icon="lock"
+                        prepend-icon=""
                         type="password"
                       ></v-text-field>
                     </v-form>
@@ -63,13 +59,7 @@
 
 <script>
 export default {
-  el: "login",
-  props: {
-    source: String,
-  },
-  data() {
-    return {};
-  },
+  el: "Login",
 };
 </script>
 
