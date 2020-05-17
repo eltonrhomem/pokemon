@@ -3,27 +3,23 @@
     <v-app id="inspire">
       <v-app id="inspire">
         <v-content>
-          <v-container class="fill-height" fluid>
+          <v-container class="fill-height" fluid style="">
+            <v-row align="center" justify="center">
+              <v-col cols="12">
+                <v-img
+                  src="..\static\pokemon.png"
+                  aspect-ratio="1.7"
+                  :contain="true"
+                  height="200px"
+                ></v-img>
+              </v-col>
+            </v-row>
             <v-row align="center" justify="center">
               <v-col cols="12" sm="8" md="4">
                 <v-card class="elevation-12">
                   <v-toolbar color="primary" dark flat>
                     <v-toolbar-title>Login form</v-toolbar-title>
                     <v-spacer></v-spacer>
-                    <v-tooltip bottom>
-                      <template v-slot:activator="{ on }">
-                        <v-btn
-                          :href="source"
-                          icon
-                          large
-                          target="_blank"
-                          v-on="on"
-                        >
-                          <v-icon>mdi-code-tags</v-icon>
-                        </v-btn>
-                      </template>
-                      <span>Source</span>
-                    </v-tooltip>
                   </v-toolbar>
                   <v-card-text>
                     <v-form>
@@ -58,8 +54,13 @@
 </template>
 
 <script>
+//import VueAudio from "vue-audio";
+
 export default {
   el: "Login",
+  components: {
+    // VueAudio,
+  },
 };
 </script>
 
