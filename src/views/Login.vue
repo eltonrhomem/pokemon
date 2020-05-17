@@ -58,18 +58,19 @@
         </v-content>
       </v-app>
     </v-app>
-    <Vuetify></Vuetify>
   </div>
 </template>
+
 <script>
-// @ is an alias to /src
-//import HelloWorld from "@/components/HelloWorld.vue";
-import Vuetify from "@/plugins/vuetify";
 export default {
-  name: "Home",
-  components: {
-    //HelloWorld,
-    Vuetify,
+  el: "login",
+  props: {
+    source: String,
+  },
+  data() {
+    return {};
   },
 };
 </script>
+
+<style></style>

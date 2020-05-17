@@ -1,11 +1,11 @@
-import { http } from ".";
+import { http } from '.';
 
 
 export default {
 
-    listar:() => {
-        return http.get('pokemon/charmander/');
-    }
+	listar:() => {
+		return http.get('pokemon/charmander/');
+	}
 
     
 };
