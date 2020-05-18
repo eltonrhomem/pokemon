@@ -1,10 +1,10 @@
 /* eslint-disable no-useless-escape */
 <template>
-  <div id="Login">
+  <div id="Login" style="">
     <audio src="..\\media\\maintheme.mp3" autoplay loop></audio>
     <v-app id="inspire">
       <v-app id="inspire">
-        <v-content>
+        <v-content class="mainwallpaper">
           <v-container class="fill-height" fluid style>
             <v-row align="center" justify="center">
               <v-col cols="12">
@@ -89,4 +89,11 @@ export default {
 };
 </script>
 
-<style></style>
+<style>
+.mainwallpaper {
+  background-image: url("..\\media\\mainwallpaper1.jpg");
+  background-size: 100% 100%;
+  background-position: "bottom";
+  background-repeat: "no-repeat";
+}
+</style>
