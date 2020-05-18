@@ -1,19 +1,23 @@
 <template>
-  <v-app>
-    <v-content>
-      <Login></Login>
-    </v-content>
-  </v-app>
+  <!-- <v-app>
+    <v-content> -->
+  <!-- <Home></Home> -->
+  <!-- </v-content>
+  </v-app> -->
+  <!-- <div></div> -->
+  <router-view></router-view>
 </template>
 
 <script>
-import Login from "@/views/Login";
+// import Home from "@/views/Home";
+//import Login from "@/views/Login";
 
 export default {
   name: "App",
 
   components: {
-    Login,
+    //Home,
+    //Login,
   },
 
   data: () => ({

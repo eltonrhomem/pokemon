@@ -1,13 +1,15 @@
+/* eslint-disable no-useless-escape */
 <template>
   <div id="Login">
+    <audio src="..\\media\\maintheme.mp3" autoplay loop></audio>
     <v-app id="inspire">
       <v-app id="inspire">
         <v-content>
-          <v-container class="fill-height" fluid style="">
+          <v-container class="fill-height" fluid style>
             <v-row align="center" justify="center">
               <v-col cols="12">
                 <v-img
-                  src="..\static\pokemon.png"
+                  src="..\media\pokemon.png"
                   aspect-ratio="1.7"
                   :contain="true"
                   height="200px"
@@ -26,22 +28,21 @@
                       <v-text-field
                         label="Login"
                         name="login"
-                        prepend-icon=""
+                        prepend-icon
                         type="text"
                       ></v-text-field>
-
                       <v-text-field
                         id="password"
                         label="Password"
                         name="password"
-                        prepend-icon=""
+                        prepend-icon
                         type="password"
                       ></v-text-field>
                     </v-form>
                   </v-card-text>
                   <v-card-actions>
                     <v-spacer></v-spacer>
-                    <v-btn color="primary">Login</v-btn>
+                    <v-btn color="primary" @click="login()">Login</v-btn>
                   </v-card-actions>
                 </v-card>
               </v-col>
@@ -55,11 +56,35 @@
 
 <script>
 //import VueAudio from "vue-audio";
+//import { Howl } from "howler";
 
 export default {
-  el: "Login",
+  //el: "Login",
   components: {
     // VueAudio,
+    //  Howl,
+  },
+  mounted() {
+    // Setup the new Howl.
+    // const sound = new Howl({
+    //   src: ["..\\media\\maintheme.mp3"],
+    //   autoplay: true,
+    //   volume: 1.0,
+    //   html5: true,
+    //   loop: true,
+    //   preload: true,
+    // });
+    // // Play the sound.
+    // sound.play();
+    // console.log(sound);
+    // eslint-disable-next-line no-useless-escape
+    // const audio = new Audio("..\media\maintheme.mp3");
+    // audio.play();
+  },
+  methods: {
+    async login() {
+      this.$router.push({ path: "/pokemon" });
+    },
   },
 };
 </script>
